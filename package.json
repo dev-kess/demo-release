@@ -1,0 +1,31 @@
+{
+  "name": "demo-release",
+  "version": "0.0.0",
+  "description": "prueba de proyecto con release",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-kess/demo-release.git"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-kess/demo-release/issues"
+  },
+  "homepage": "https://github.com/dev-kess/demo-release#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "semantic-release": "^19.0.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
