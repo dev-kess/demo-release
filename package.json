@@ -4,10 +4,10 @@
   "description": "prueba de proyecto con release",
   "main": "index.js",
   "scripts": {
-    "lint-fix": "echo \"lint-fix\"",
-    "test": "echo \"test\"",
-    "build": "echo \"build\"",
-    "release": "echo \"release\""
+    "lint-fix": "echo \"lint-fix-1\"",
+    "test": "echo \"test-1\"",
+    "build": "echo \"build-1\"",
+    "release": "echo \"release-1\""
   },
   "repository": {
     "type": "git",
