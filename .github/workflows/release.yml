@@ -10,6 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: google-github-actions/release-please-action@v3
+      with:
+        release-type: node
+        package-name: demo-release
+        changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 16.x
+    - name: Install dependencies
+      run: npm install
     - name: Release please
       uses: google-github-actions/release-please-action@v3
       id: release
@@ -18,14 +31,6 @@ jobs:
         release-type: node
         package-name: demo-release
         command: github-release
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16.x
-    - name: Install dependencies
-      run: npm install   
     - name: Release
       run: |
         git config user.name github-actions[bot]
