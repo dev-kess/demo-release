@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/dev-kess/demo-release/compare/v1.1.0...v1.2.0) (2022-10-25)
+
+
+### Features
+
+* nuevo cambio ([abde58f](https://github.com/dev-kess/demo-release/commit/abde58fda2723241b12399da5f6b1402e9fbbcbb))
+
 ## [1.1.0](https://github.com/dev-kess/demo-release/compare/v1.0.0...v1.1.0) (2022-10-25)
 
 
