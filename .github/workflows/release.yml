@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Save state
+      run: echo "::save-state name={name}::{value}"
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
