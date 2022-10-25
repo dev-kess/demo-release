@@ -24,9 +24,7 @@ jobs:
       with:
         node-version: 16.x
     - name: Install dependencies
-      run: |
-        npm cache clean
-        npm install   
+      run: npm install   
     - name: Release
       if: ${{ steps.release.outputs.release_created }}
       run: |
