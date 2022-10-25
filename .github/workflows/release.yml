@@ -19,23 +19,14 @@ jobs:
         package-name: demo-release
     - name: Checkout
       uses: actions/checkout@v2
-      if: ${{ steps.release.outputs.release_created }}
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
         node-version: 16.x
-      if: ${{ steps.release.outputs.release_created }}
     - name: Install dependencies
       run: |
         npm cache clean
-        npm install
-      if: ${{ steps.release.outputs.release_created }}
-    - name: Lint
-      run: npm run lint-fix
-    - name: Test
-      run: npm run test:unit --if-present
-    - name: Build
-      run: npm run build      
+        npm install   
     - name: Release
       if: ${{ steps.release.outputs.release_created }}
       run: |
