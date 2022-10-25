@@ -10,21 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Save state
-      run: echo "{name}={value}" >> $GITHUB_STATE
-    - name: Set output
-      run: echo "{name}={value}" >> $GITHUB_OUTPUT
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16.x
-    - uses: google-github-actions/release-please-action@v3
+    - name: release-please-action
+      uses: google-github-actions/release-please-action@v3.1.2
       id: release
       with:
         token: ${{ secrets.DEV_TOKEN }}
         release-type: node
         package-name: demo-release
-        command: github-release
+        changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
     - uses: actions/checkout@v2
     - name: Release
       run: |
@@ -39,8 +32,4 @@ jobs:
         git tag -a v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} -m "Release v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}"
         git push origin v${{ steps.release.outputs.major }}
         git push origin v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}
-    - uses: google-github-actions/release-please-action@v3
-      with:
-        release-type: node
-        package-name: demo-release
-        changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
+        
