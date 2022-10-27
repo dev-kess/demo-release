@@ -15,6 +15,6 @@ jobs:
       id: release
       with:
         token: ${{ secrets.DEV_TOKEN }}
-        command: manifest
+        command: manifest-pr
         default-branch: main
         
