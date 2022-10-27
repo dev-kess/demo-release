@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0](https://github.com/dev-kess/demo-release/compare/v1.2.0...v1.3.0) (2022-10-27)
+
+
+### Features
+
+* cambio de command ([022cf13](https://github.com/dev-kess/demo-release/commit/022cf130a0f16110af4a1e0b0a4500cc6ce81414))
+* cambio de main ([01aa431](https://github.com/dev-kess/demo-release/commit/01aa431bf8f7edbfa9579c33d0105757e648d11b))
+
+
+### Bug Fixes
+
+* cambio de comando ([29ab655](https://github.com/dev-kess/demo-release/commit/29ab6552d6dfe3d674ee5d9dfce283c4c76a28df))
+
 ## [1.2.0](https://github.com/dev-kess/demo-release/compare/v1.1.0...v1.2.0) (2022-10-25)
 
 
